@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="开始" />
+
+        <Button
+            android:id="@+id/dateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择日期" />
+
+        <Button
+            android:id="@+id/timeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择时间" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="速度"
+                android:textColor="#959595" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <SeekBar
+                    android:id="@+id/speed_seekbar"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:focusable="true"
+                    android:maxHeight="4dp"
+                    android:minHeight="4dp"
+                    android:progressDrawable="@drawable/po_seekbar"
+                    android:thumb="@drawable/seekbar_thumb" />
+
+                <TextView
+                    android:id="@+id/choice_speed_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/speed_seekbar"
+                    android:gravity="center"
+                    android:textColor="#959595" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.example.test.TextMoveLayout
+            android:id="@+id/textLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:maxHeight="4dp"
+            android:minHeight="4dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:progressDrawable="@drawable/po_seekbar"
+            android:thumb="@drawable/seekbar_thumb" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="14dp"
+            android:textColor="#959595" />
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:textColor="#959595" />
+    </RelativeLayout>
+
+</LinearLayout>
